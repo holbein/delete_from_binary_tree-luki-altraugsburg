@@ -1,7 +1,8 @@
 class Suchbaum {
     Baumelem erster;
 
-    Suchbaum () {    
+    Suchbaum() {
+        // Baum aus dem Buch replizieren
         this.erster = new Knoten(new Wort("natty"),
                                 // Links.....
                                  new Knoten(new Wort("decay"),
@@ -9,10 +10,10 @@ class Suchbaum {
                                             new Knoten(new Wort("jeer"),
                                                        new Knoten(new Wort("folly"),
                                                                   new Abschluss(),
-                                                                  new Knoten(new Wort("heir"), 
-                                                                             new Abschluss(), 
+                                                                  new Knoten(new Wort("heir"),
+                                                                             new Abschluss(),
                                                                              new Abschluss()
-                                                                            )           
+                                                                            )
                                                                   ),
                                                        new Abschluss()
                                                        )
@@ -26,13 +27,18 @@ class Suchbaum {
                                                         )
                                              )
                                   );
-                    
+
     }
-    
+
+    // Alternativ dieser Konstruktor
+    // Suchbaum() {
+    //   this.erster = new Abschluss()
+    // }
+
     void einfuegen(Datenelem d) {
         this.erster = erster.einfuegen(d);
     }
-    
+
     void loeschen(Datenelem d) {
         this.erster = erster.loeschen(d);
     }

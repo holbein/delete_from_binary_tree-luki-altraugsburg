@@ -1,5 +1,3 @@
 abstract class Datenelem {
-
-   abstract String inhaltGeben();
-    
+   abstract String inhaltGeben();    
 }
